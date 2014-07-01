@@ -1,0 +1,44 @@
+A rectangular map consisting of N rows and M columns of square areas is given.
+Each area is painted with a certain color.
+Two areas of the map belong to the same country if the following conditions are met:
+* they have the same color
+* it is possible to travel from one area to the other by moving only north, south, west or east without moving
+  over areas of different color
+
+The map can be described by a zero-indexed matrix consisting of N rows and M columns of integers. The color of each
+area is described by the corresponding element of the matrix. Two areas have the same color if and only if their
+corresponding matrix elements have the same value.
+For example, consider the following matrix with 7 rows and 3 columns:
+A = {{5, 4, 4}
+     {4, 3, 4}
+     {3, 2, 4}
+     {2, 2, 2}
+     {3, 3, 4}
+     {1, 4, 4}
+     {4, 1, 1}}
+
+Matrix A describes a map that is colored with 5 colors. Areas on the map belong to 11 different countries:
+1) A[0][0]
+2) A[0][1], A[0][2], A[1][2], A[2][2]
+3) A[1][0]
+4) A[1][1]
+5) A[2][0]
+6) A[2][1], A[3][0], A[3][1], A[3][2]
+7) A[4][0], A[4][1]
+8) A[4][2], A[5][1], A[5][2]
+9) A[5][0]
+10) A[6][0]
+11) A[6][1], A[6][2]
+
+Write a function: class Solution { public int solution(int [][] A); }
+that given a zero-indexed matrix A consisting of N rows and M columns of integers returns the number of different
+countries that the areas of the map described by matrix A belong to.
+Assume that:
+* N is integer within the range [1, 300'000]
+* M is integer within the range [1, 300'000]
+* the number of elements within the matrix A is within the range [1, 300'000]
+* each element of matrix A is an integer within the range [-1'000'000'000, 1'000'000'000].
+
+Complexity:
+* expected worst case time complexity is O(N*M)
+* expected worst case space complexity is O(N*M)

@@ -1,0 +1,17 @@
+Function F(K) is defined for non-negative integers as follows:
+* F(K) = 0 when K = 0
+* F(K) = F(K-1) + K when K > 0
+
+Write function:
+class Solution { public int solution(int N); }
+
+that, given a non-negative integer N, returns the largest non-negative integer L such that F(L) <= N.
+The function should return -1 if no such integer L exists.
+Fir example, given N = 17 the function should return 5, because F(5) = 15, and F(K) > 17 for all integers K greater than 5.
+
+Assume that:
+* N is an integer within the range [0.. 1'000'000'000].
+
+Complexity:
+* expected worst-case time complexity is O(sqrt(N)),
+* expected worst-case space complexity is O(1).
