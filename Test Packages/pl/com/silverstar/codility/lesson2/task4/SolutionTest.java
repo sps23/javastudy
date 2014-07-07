@@ -57,14 +57,67 @@ public class SolutionTest {
     }
 
     @Test
+    public void testSolutionSmallA() {
+        System.out.println("testSolutionSmallA");
+        int[] A = new int[1000];
+        for (int i = 0; i < A.length; i++) {
+            A[i] = Integer.MIN_VALUE;
+        }
+        Solution instance = new Solution();
+        int expResult = 1;
+        int result = instance.solution(A);
+        Assert.assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testSolutionBigA() {
+        System.out.println("testSolutionBigA");
+        int[] A = new int[1000];
+        for (int i = 0; i < A.length; i++) {
+            A[i] = Integer.MAX_VALUE;
+        }
+        Solution instance = new Solution();
+        int expResult = 1;
+        int result = instance.solution(A);
+        Assert.assertEquals(expResult, result);
+    }
+
+    @Test
     public void testSolutionMaxN() {
         System.out.println("testSolutionMaxN");
-        int[] A = new int[MAX_N];
+        int N = MAX_N;
+        int[] A = new int[N];
+        for (int i = 0; i < A.length; i++) {
+            A[i] = i + 1;
+        }
+        A[N - 1] = 1;
+        Solution instance = new Solution();
+        int expResult = MAX_N;
+        int result = instance.solution(A);
+        Assert.assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testSolutionMaxNAll() {
+        System.out.println("testSolutionMaxNAll");
+        int N = MAX_N;
+        int[] A = new int[N];
         for (int i = 0; i < A.length; i++) {
             A[i] = i + 1;
         }
         Solution instance = new Solution();
         int expResult = MAX_N + 1;
+        int result = instance.solution(A);
+        Assert.assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testSolutionSingle() {
+        System.out.println("testSolutionSingle");
+        int N = MAX_N;
+        int[] A = new int[]{1};
+        Solution instance = new Solution();
+        int expResult = 2;
         int result = instance.solution(A);
         Assert.assertEquals(expResult, result);
     }
