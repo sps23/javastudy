@@ -1,4 +1,4 @@
-package pl.com.silverstar.codility.lesson4.task1;
+package pl.com.silverstar.codility.lesson4.task2;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,61 +12,60 @@ public class SolutionTest {
     public SolutionTest() {
     }
 
-    private final int MAX_N = 100000;
-
-    private final int MAX_A = 1000000;
-
-    private final int MIN_A = -1000000;
-
     /**
      * Test of solution method, of class Solution.
      */
     @Test
     public void testSolutionExample() {
         System.out.println("testSolutionExample");
-        int[] A = new int[]{2, 1, 1, 2, 3, 1};
+        int[] A = new int[]{-3, 1, 2, -2, 5, 6};
         Solution instance = new Solution();
-        int expResult = 3;
+        int expResult = 60;
         int result = instance.solution(A);
         Assert.assertEquals(expResult, result);
     }
 
     @Test
-    public void testSolutionMaxN() {
-        System.out.println("testSolutionMaxN");
-        int[] A = new int[MAX_N];
-        for (int i = 0; i < MAX_N; i++) {
-            A[i] = 33;
-        }
+    public void testSolution1() {
+        System.out.println("testSolution1");
+        int[] A = new int[]{3, 1, 2};
         Solution instance = new Solution();
-        int expResult = 1;
+        int expResult = 6;
         int result = instance.solution(A);
         Assert.assertEquals(expResult, result);
     }
 
     @Test
-    public void testSolutionMaxNMinA() {
-        System.out.println("testSolutionMaxNMinA");
-        int[] A = new int[MAX_N];
-        for (int i = 0; i < MAX_N; i++) {
-            A[i] = MIN_A;
+    public void testSolution2() {
+        System.out.println("testSolution2");
+        int[] A = new int[1000];
+        for (int i = 0; i < 1000; i++) {
+            if (i < 500) {
+                A[i] = -2;
+            } else {
+                A[i] = 1;
+            }
         }
         Solution instance = new Solution();
-        int expResult = 1;
+        int expResult = 4;
         int result = instance.solution(A);
         Assert.assertEquals(expResult, result);
     }
 
     @Test
-    public void testSolutionMaxNMaxA() {
-        System.out.println("testSolutionMaxNMaxA");
-        int[] A = new int[MAX_N];
-        for (int i = 0; i < MAX_N; i++) {
-            A[i] = MAX_A;
+    public void testSolution3() {
+        System.out.println("testSolution2");
+        int[] A = new int[2003];
+        for (int i = 0; i < 2000; i++) {
+            A[i] = i % 21 - 10;
         }
+        A[2000] = -1000;
+        A[2001] = 500;
+        A[2002] = -1;
         Solution instance = new Solution();
-        int expResult = 1;
+        int expResult = 5000000;
         int result = instance.solution(A);
         Assert.assertEquals(expResult, result);
     }
+
 }
