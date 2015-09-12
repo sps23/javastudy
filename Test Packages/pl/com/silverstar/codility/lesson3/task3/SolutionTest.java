@@ -18,7 +18,6 @@ import org.junit.Test;
  */
 public class SolutionTest {
 
-    private final int MIN_N = 2;
     private final int MAX_N = 100000;
     private final int MIN_A = -10000;
     private final int MAX_A = 10000;

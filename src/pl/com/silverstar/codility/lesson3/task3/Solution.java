@@ -48,7 +48,6 @@ public class Solution {
             return 0;
         }
 
-        float minAvg = Float.MAX_VALUE;
         int minAvgIndex = 0;
         int sum = A[0];
         float avg;

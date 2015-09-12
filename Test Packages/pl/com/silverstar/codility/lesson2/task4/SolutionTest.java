@@ -20,10 +20,6 @@ public class SolutionTest {
 
     private final int MAX_N = 100000;
 
-    private final int MAX_A = Integer.MAX_VALUE;
-
-    private final int MIN_A = Integer.MIN_VALUE;
-
     public SolutionTest() {
     }
 
@@ -114,7 +110,6 @@ public class SolutionTest {
     @Test
     public void testSolutionSingle() {
         System.out.println("testSolutionSingle");
-        int N = MAX_N;
         int[] A = new int[]{1};
         Solution instance = new Solution();
         int expResult = 2;

@@ -1,7 +1,5 @@
 package pl.com.silverstar.codility.tomtom.task1;
 
-import java.math.BigInteger;
-
 /**
  *
  * @author Sylwester Stocki <sylwester.stocki.rnd@gmail.com>

@@ -1,7 +1,5 @@
 package pl.com.silverstar.codility.tomtom.task3;
 
-import java.util.Arrays;
-
 /**
  *
  * @author Sylwester Stocki <sylwester.stocki.rnd@gmail.com>
